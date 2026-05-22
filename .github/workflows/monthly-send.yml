@@ -1,0 +1,25 @@
+name: Monthly Agenda Mail
+
+on:
+  schedule:
+
+    # 毎月15日 09:00 JST
+    # GitHub Actions は UTC なので 00:00 UTC = 09:00 JST
+    - cron: '0 0 15 * *'
+
+  workflow_dispatch:
+
+jobs:
+
+  send-mail:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Call Supabase Function
+
+        run: |
+
+          curl -X POST \
+          https://ejtwfrmfteaxdexoyfwk.supabase.co/functions/v1/send-monthly-agenda
