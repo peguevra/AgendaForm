@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>議題登録フォーム</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Supabase CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>議題登録フォーム</h1>
+
+        <div class="meeting-box">
+            <p id="meetingInfo"></p>
+        </div>
+
+        <form id="agendaForm">
+
+            <label for="office">事業所名</label>
+            <input
+                type="text"
+                id="office"
+                maxlength="100"
+                required
+            >
+
+            <label for="author">登録者</label>
+            <input
+                type="text"
+                id="author"
+                maxlength="100"
+                required
+            >
+
+            <label for="body">議題本文</label>
+
+            <textarea
+                id="body"
+                rows="8"
+                maxlength="3000"
+                required
+            ></textarea>
+
+            <button
+                type="submit"
+                id="submitButton"
+            >
+                登録
+            </button>
+
+        </form>
+
+        <p id="message"></p>
+
+    </div>
+
+    <script src="./js/config.js"></script>
+    <script src="./js/app.js"></script>
+
+</body>
+</html>
