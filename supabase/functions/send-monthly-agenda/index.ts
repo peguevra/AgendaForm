@@ -118,7 +118,7 @@ serve(async () => {
                 },
                 body: JSON.stringify({
                     from: "onboarding@resend.dev",
-                    to: ["donation9196999@gmail.com"],
+                    to: ["donation91969@gmail.com"],
                     subject: subject,
                     html: html
                 })
